@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         Log.e(".PoliciesFragment","Worked fine before");
-        RecyclerView recyclerView = view.findViewById(R.id.recycler_policies);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rec);
         Log.e(".PoliciesFragment","Worked now??????????????????????");
 
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
