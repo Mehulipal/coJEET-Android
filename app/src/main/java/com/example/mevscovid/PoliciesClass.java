@@ -2,14 +2,6 @@ package com.example.mevscovid;
 
 public class PoliciesClass {
 
-
-
-/**
- * {@link Word} represents a vocabulary word that the user wants to learn.
- * It contains a default translation and a Miwok translation for that word.
- */
-
-
     private String mPolicy_name;
 
     private String mPolicy_description;
