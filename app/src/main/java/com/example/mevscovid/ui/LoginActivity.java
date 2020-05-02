@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mevscovid.MainActivity;
 import com.example.mevscovid.R;
-import com.example.mevscovid.ui.gallery.GalleryFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null) {
                     Toast.makeText(LoginActivity.this, "You are logged in", Toast.LENGTH_SHORT);
-                    Intent i = new Intent(LoginActivity.this, GalleryFragment.class);
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(i);
                 } else {
                     Toast.makeText(LoginActivity.this, "Please Login", Toast.LENGTH_SHORT);
@@ -142,14 +142,13 @@ public class LoginActivity extends AppCompatActivity {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this, "Login Error,Please Try Again", Toast.LENGTH_SHORT);
                             } else {
-                                startActivity(new Intent(LoginActivity.this, GalleryFragment.class));
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             }
                         }
                     });
 
                 } else {
                     Toast.makeText(LoginActivity.this, "Error Occured", Toast.LENGTH_SHORT);
-
                 }
             }
 

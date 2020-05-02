@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mevscovid.MainActivity;
 import com.example.mevscovid.R;
-import com.example.mevscovid.ui.gallery.GalleryFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -129,14 +129,13 @@ public class SignUpActivity extends AppCompatActivity {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(SignUpActivity.this, "SignUp Unsuccessful,Please Try Again", Toast.LENGTH_SHORT);
                             } else {
-                                startActivity(new Intent(SignUpActivity.this, GalleryFragment.class));
+                                startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                             }
                         }
                     });
 
                 } else {
                     Toast.makeText(SignUpActivity.this, "Error Occured", Toast.LENGTH_SHORT);
-
                 }
             }
 
