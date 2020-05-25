@@ -1,57 +1,55 @@
 package com.example.mevscovid;
-        import android.content.Context;
-        import android.util.Log;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
-        import android.widget.ImageView;
         import android.widget.TextView;
 
         import androidx.annotation.NonNull;
         import androidx.recyclerview.widget.RecyclerView;
 
-        import com.example.mevscovid.R;
+        import com.example.mevscovid.ui.Post;
+        import com.example.mevscovid.ui.PoliciesClass;
 
-        import org.w3c.dom.Text;
-
-        import java.util.ArrayList;
         import java.util.List;
 
 public class adapter extends RecyclerView.Adapter<adapter.ViewHolder> {
 
-    private Context context;
-    private ArrayList<PoliciesClass> mPoliciesItem;
+  //  private Context context;
+    private List<PoliciesClass> mPoliciesItem;
 
-    public adapter(Context context) {
-        this.context = context;
+
+    public adapter(List<PoliciesClass> mPoliciesItem) {
+       // this.context = context;
+        this.mPoliciesItem = mPoliciesItem;
     }
 
-    public static class ViewHolder extends  RecyclerView.ViewHolder {
+
+    public class ViewHolder extends  RecyclerView.ViewHolder {
         public TextView p_name;
         public TextView p_description;
-        public TextView v_us;
-        public ImageView p_image_id;
+     //   public TextView v_us;
+        // public ImageView p_image_id;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             p_name=(TextView)itemView.findViewById(R.id.policy_name_view);
             p_description=(TextView)itemView.findViewById(R.id.policy_description_view);
-            v_us=(TextView)itemView.findViewById(R.id.visit_us_button);
+          //  v_us=(TextView)itemView.findViewById(R.id.visit_us_button);
            // p_image_id=(ImageView) itemView.findViewById(R.id.policy_image_view);
 
 
         }
     }
 
-    public void setPoliciesAdapter(ArrayList<PoliciesClass> PolicyItem)
+  /**  public void setPoliciesAdapter(ArrayList<PoliciesClass> PolicyItem)
     {
         mPoliciesItem=PolicyItem;
-    }
+    }**/
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v=LayoutInflater.from(parent.getContext()).inflate(R.layout.card,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card,parent,false);
         return (new ViewHolder(v));
     }
 
@@ -60,7 +58,7 @@ public class adapter extends RecyclerView.Adapter<adapter.ViewHolder> {
         PoliciesClass currentPolicy = mPoliciesItem.get(position);
         holder.p_name.setText(currentPolicy.getmPolicy_name());
         holder.p_description.setText(currentPolicy.getmPolicy_description());
-        holder.v_us.setText(currentPolicy.getmVisit_us());
+      //  holder.v_us.setText(currentPolicy.getmVisit_us());
         //holder.p_image_id.setImageResource(currentPolicy.getmPolicy_image_id());
     }
 
