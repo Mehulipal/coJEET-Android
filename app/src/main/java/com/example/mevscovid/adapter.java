@@ -24,7 +24,7 @@ public class adapter extends RecyclerView.Adapter<adapter.ViewHolder> {
     }
 
 
-    public class ViewHolder extends  RecyclerView.ViewHolder {
+    public static class ViewHolder extends  RecyclerView.ViewHolder {
         public TextView p_name;
         public TextView p_description;
      //   public TextView v_us;
