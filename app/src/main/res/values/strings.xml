@@ -52,5 +52,12 @@
     <string name="select_date">Date</string>
     <string name="save_edit">Save edit</string>
 
+    <array name="genres">
+        <item>Rock</item>
+        <item>Pop</item>
+        <item>Sufi</item>
+        <item>Folk</item>
+    </array>
+
 
 </resources>
