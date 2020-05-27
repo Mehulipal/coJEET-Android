@@ -1,11 +1,13 @@
 package com.example.mevscovid.ui.slideshow;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
@@ -64,6 +66,16 @@ public class SlideshowFragment extends Fragment {
             }
         });
 
+        listViewMembers.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Members membe = memberlist.get(position);
+                showUpdateDialog(membe.getMId(), membe.getMname());
+                return false;
+            }
+        });
+
 
         return root;
     }
@@ -96,6 +108,53 @@ public class SlideshowFragment extends Fragment {
         });
 
     }
+
+    private void showUpdateDialog(final String memId, String memName){
+
+        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.update_dialog,null);
+        dialogBuilder.setView(dialogView);
+
+        final EditText editName = (EditText)dialogView.findViewById(R.id.update);
+        final Button editButton = (Button)dialogView.findViewById(R.id.buUpdate);
+        final Spinner editSpin = (Spinner)dialogView.findViewById(R.id.spin);
+        dialogBuilder.setTitle("Updating Member "+memName);
+        final AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.show();
+
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(".PoliciesFragment","Worked fine before????????????????????");
+              String name = editName.getText().toString().trim();
+              String genre = editSpin.getSelectedItem().toString();
+
+              if(TextUtils.isEmpty(name)){
+                  editName.setError("Name required");
+                  return;
+              }
+              updateMember(memId,name,genre);
+              alertDialog.dismiss();
+            }
+        });
+
+
+
+    }
+
+    private boolean updateMember(String id, String name, String genre)
+    {
+        Log.d(".PoliciesFragment","Worked fine before!!!!!!!!!!");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("members").child(id);
+        Members member1 = new Members(id,name,genre);
+        databaseReference.setValue(member1);
+      //  mDatabase.child("users").child(userId).setValue(user);
+       Toast.makeText(getActivity(),"Members Updated Successfully", Toast.LENGTH_SHORT).show();
+        return true;
+
+    }
+
 
     private void addMember(){
 
