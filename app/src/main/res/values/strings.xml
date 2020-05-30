@@ -51,6 +51,7 @@
     <string name="edit_profile_hobby">Hobby</string>
     <string name="select_date">Date</string>
     <string name="save_edit">Save edit</string>
+    <string name="smart_reply_error">Error</string>
 
     <array name="genres">
         <item>Rock</item>
