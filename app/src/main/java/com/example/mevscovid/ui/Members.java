@@ -2,7 +2,7 @@ package com.example.mevscovid.ui;
 
 public class Members {
 
-    String mId;
+    String mid;
     String mname;
     String mgenre;
 
@@ -10,12 +10,12 @@ public class Members {
 
     public Members(String mId, String mname, String mgenre)
     {
-        this.mId = mId;
+        this.mid = mId;
         this.mname = mname;
         this.mgenre = mgenre;
     }
 
-    public String getMId(){return mId;}
+    public String getMId(){return mid;}
     public String getMname(){return mname;}
     public String getMgenre(){return mgenre;}
 

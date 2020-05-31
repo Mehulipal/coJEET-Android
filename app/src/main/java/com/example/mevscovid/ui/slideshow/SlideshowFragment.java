@@ -71,6 +71,8 @@ public class SlideshowFragment extends Fragment {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Members membe = memberlist.get(position);
+                String identity = membe.getMId();
+                Log.e("hello",identity);
                 showUpdateDialog(membe.getMId(), membe.getMname());
                 return false;
             }
@@ -168,9 +170,14 @@ public class SlideshowFragment extends Fragment {
             Members member = new Members(id, Name, Genre);
             databaseMembers.child(id).setValue(member);
             Toast.makeText(getContext(),"Member added",Toast.LENGTH_SHORT).show();
+            String identity = member.getMId();
+            Log.e("hello",identity);
+  //          pass_id(identity);
 
         }else{
             Toast.makeText(getContext(),"Enter your name",Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }
