@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context="com.example.mevscovid.ui.SignUpActivity">
+    android:layout_margin="20dp"
+    tools:context="com.example.mevscovid.ui.SignUpActivity"
+    android:paddingTop="150dp">
 
    <!-- <ImageView
         android:id="@+id/logo"
@@ -38,7 +39,6 @@
         android:maxLines="1"
         android:padding="12dp"
         android:textColor="@color/colorBlack"
-        android:layout_below="@+id/login_error"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:singleLine="true" />

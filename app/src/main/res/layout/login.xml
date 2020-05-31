@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:padding="16dp"
-tools:context="com.example.mevscovid.ui.LoginActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context="com.example.mevscovid.ui.LoginActivity"
+    android:paddingTop="150dp">
 
 <!--<ImageView
     android:id="@+id/logo"
@@ -38,7 +39,6 @@ tools:context="com.example.mevscovid.ui.LoginActivity">
     android:maxLines="1"
     android:padding="12dp"
     android:textColor="@color/colorBlack"
-    android:layout_below="@+id/login_error"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="8dp"
     android:singleLine="true" />
