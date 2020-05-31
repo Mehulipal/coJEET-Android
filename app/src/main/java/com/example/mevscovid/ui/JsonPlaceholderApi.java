@@ -6,6 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface JsonPlaceholderApi {
-    @GET("posts")
+    @GET("mehuli8.json")
     Call<List<PoliciesClass>> getposts();
 }
