@@ -146,7 +146,7 @@ public class SlideshowFragment extends Fragment {
     private boolean updateMember(String id, String name, String genre)
     {
         Log.d(".PoliciesFragment","Worked fine before!!!!!!!!!!");
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("members").child(id);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Members").child(id);
         Members member1 = new Members(id,name,genre);
         databaseReference.setValue(member1);
       //  mDatabase.child("users").child(userId).setValue(user);
