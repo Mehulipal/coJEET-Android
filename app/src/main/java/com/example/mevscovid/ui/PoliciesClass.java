@@ -23,9 +23,10 @@ public class PoliciesClass {
     public String getmPolicy_name() {
         return title;
     }
-    public String getmPolicy_description() {
+  /**  public String getmPolicy_description() {
         return text;
     }
+   **/
 
     /**public Integer getmPolicy_image_id(){
         return mPolicy_image_id;
