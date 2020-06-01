@@ -23,10 +23,12 @@ app:strokeWidth="1dp">
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:text=""
+        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="15dp"
-        tools:text="Policy Name"
-        android:padding="10dp"/>
+        tools:text=""
+        android:padding="10dp"
+        android:autoLink="all"/>
 
     <View
         android:layout_width="match_parent"
@@ -39,19 +41,19 @@ app:strokeWidth="1dp">
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:padding="8dp"
-        tools:src="@drawable/abc_vector_test" />-->
+        tools:src="@drawable/abc_vector_test" />
 
     <TextView
         android:id="@+id/policy_description_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:text="Policy Description"
+        android:text=""
         android:textColor="#000000"
         android:textSize="20sp"
         tools:text="Sample text"
         android:padding="10dp"/>
-
+    -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

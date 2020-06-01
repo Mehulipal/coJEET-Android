@@ -59,5 +59,36 @@
         <item>Construction Labourer</item>
     </array>
 
+    <string name="link1">
+        <a href = "https://mohfw.gov.in/">VISIT</a>
+    </string>
+    <string name="link2">
+        <a href = "https://www.google.com/aclk?sa=L&amp;ai=DChcSEwj6qNDq5N7pAhWD15YKHaz1CeYYABAAGgJ0bA&amp;sig=AOD64_1bN4x8F42MWGGiqGH_YaXMi71DfA&amp;q=&amp;ved=2ahUKEwix6Mbq5N7pAhU_zjgGHVCWAJUQ0Qx6BAgZEAE&amp;adurl=">VISIT</a>
+    </string>
+    <string name="link3">
+        <a href = "https://www.mha.gov.in/">VISIT</a>
+    </string>
+    <string name="link4">
+        <a href = "https://serviceonline.gov.in/epass/">VISIT</a>
+    </string>
+    <string name="link5">
+        <a href = "https://www.google.com/aclk?sa=L&amp;ai=DChcSEwiFx6Lq5t7pAhVNpJYKHXDCAs8YABAAGgJ0bA&amp;sig=AOD64_1vFap-tHH59Z63t41qDlEy612HXA&amp;q=&amp;ved=2ahUKEwjimZbq5t7pAhVNxTgGHYgaDHkQ0Qx6BAgMEAE&amp;adurl=">VISIT</a>
+    </string>
+    <string name="link6">
+        <a href = "https://mygov.in/task/join-war-against-covid-19-register-volunteer/">VISIT</a>
+    </string>
+    <string name="link7">
+        <a href = "https://serviceonline.gov.in/">VISIT</a>
+    </string>
+    <string name="link8">
+        <a href = "http://covid19epass.hp.gov.in/">VISIT</a>
+    </string>
+    <string name="link9">
+        <a href = "https://srinagar.nic.in/public-utility-category/hospitals/">VISIT</a>
+    </string>
+    <string name="link10">
+        <a href = "https://www.hpsbys.in/content/iuu">VISIT</a>
+    </string>
+
 
 </resources>
