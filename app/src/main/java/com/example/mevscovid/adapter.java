@@ -33,7 +33,7 @@ public class adapter extends RecyclerView.Adapter<adapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             p_name=(TextView)itemView.findViewById(R.id.policy_name_view);
-           // p_description=(TextView)itemView.findViewById(R.id.policy_description_view);
+            p_description=(TextView)itemView.findViewById(R.id.policy_description_view);
           //  v_us=(TextView)itemView.findViewById(R.id.visit_us_button);
            // p_image_id=(ImageView) itemView.findViewById(R.id.policy_image_view);
 
@@ -57,7 +57,7 @@ public class adapter extends RecyclerView.Adapter<adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         PoliciesClass currentPolicy = mPoliciesItem.get(position);
         holder.p_name.setText(currentPolicy.getmPolicy_name());
-      //  holder.p_description.setText(currentPolicy.getmPolicy_description());
+        holder.p_description.setText(currentPolicy.getmPolicy_description());
       //  holder.v_us.setText(currentPolicy.getmVisit_us());
         //holder.p_image_id.setImageResource(currentPolicy.getmPolicy_image_id());
     }
