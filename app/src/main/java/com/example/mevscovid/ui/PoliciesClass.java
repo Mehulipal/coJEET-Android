@@ -3,9 +3,9 @@ package com.example.mevscovid.ui;
 import com.google.gson.annotations.SerializedName;
 
 public class PoliciesClass {
-    @SerializedName("body")
-    private String title;
 
+    private String title;
+    @SerializedName("body")
     private String text;
 
    // private Integer mPolicy_image_id;
@@ -23,10 +23,10 @@ public class PoliciesClass {
     public String getmPolicy_name() {
         return title;
     }
-  /**  public String getmPolicy_description() {
+    public String getmPolicy_description() {
         return text;
     }
-   **/
+
 
     /**public Integer getmPolicy_image_id(){
         return mPolicy_image_id;
