@@ -1,2 +1,2 @@
 # covid19_hackathon
-An integrated COVID app for Himachal Pradesh and Jammu & Kashmir.
+Integrated php-mysql-java android application having 26 modules connecting 36 Indian states and UTs...
