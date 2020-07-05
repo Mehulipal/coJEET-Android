@@ -23,6 +23,10 @@
                 android:icon="@drawable/ic_chat_black_24dp"
                 android:title="@string/menu_send" />
         <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Add" />
+        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="@string/menu_gallery" />
