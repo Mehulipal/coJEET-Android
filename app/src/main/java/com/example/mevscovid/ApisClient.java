@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ApisClient {
-    public static final String BASE_URL = "http://mehuli.epizy.com/andaman_n_nicobar_islands/";
+    public static final String BASE_URL = "https://8802de790a71.ngrok.io/youtubewebsite/";
     public static Retrofit retrofit = null;
 
     public static Retrofit getApiClient(){

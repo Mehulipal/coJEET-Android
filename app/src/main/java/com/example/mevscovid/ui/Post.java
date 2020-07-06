@@ -1,58 +1,29 @@
 package com.example.mevscovid.ui;
 
 import android.util.Log;
-
+import androidx.annotation.Keep;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+
 public class Post {
 
-    @SerializedName("user")
-    @Expose
-    private String user;
-    @SerializedName("email")
-    @Expose
-    private String email;
-    @SerializedName("mobile")
-    @Expose
-    private String mobile;
-    @SerializedName("comments")
-    @Expose
-    private String comments;
+    @SerializedName("status")
+    private String status="";
+    @SerializedName("msg")
+    private String msg="";
 
-
-    public String getUser() {
-        return user;
+    public String getStatus() {
+        return status;
     }
-
-    public void setUser(String user) {
-        this.user = user;
+    public void setStatus(String status) {
+        this.status = status;
     }
-
-    public String getEmail() {
-        return email;
+    public String getMsg() {
+        return msg;
     }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public String getComments() {
-        return comments;
-    }
-
-    public void setComments(String comments) {
-        this.comments = comments;
-    }
-
-
 }
 

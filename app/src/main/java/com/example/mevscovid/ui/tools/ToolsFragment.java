@@ -20,6 +20,8 @@ import com.example.mevscovid.R;
 import com.example.mevscovid.ui.JsonPlaceholderApis;
 import com.example.mevscovid.ui.Post;
 
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -76,7 +78,15 @@ public class ToolsFragment extends Fragment {
 
         JsonPlaceholderApis api = ApisClient.getApiClient().create(JsonPlaceholderApis.class);
 
-        Call<Post> call = api.insertUser(suser, semail, smobile, scomments);
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("user", suser)
+                .addFormDataPart("email", semail)
+                .addFormDataPart("mobile", smobile)
+                .addFormDataPart("comments", scomments)
+                .build();
+
+        Call<Post> call = api.insertUser(requestBody);
         Log.e("user",suser);
       //  Post p = new Post();
 
@@ -84,9 +94,14 @@ public class ToolsFragment extends Fragment {
         call.enqueue(new Callback<Post>() {
             public void onResponse(Call<Post> call, Response<Post> response) {
                 Log.e("RETRO", "response : " + response.body().toString());
+                // Toast.makeText(getActivity(), "Data inserted", Toast.LENGTH_SHORT).show();
+                Log.e("babu","mopu");
 
-                Toast.makeText(getActivity(), "Data inserted", Toast.LENGTH_SHORT).show();
+                Log.e("babu","mopu");
+                Toast.makeText(getContext(),"Data successfully inserted",Toast.LENGTH_LONG).show();
 
+                Post insertResponse = response.body();
+                Log.e("status",insertResponse.getMsg());
             }
             @Override
             public void onFailure(Call<Post> call, Throwable t) {
