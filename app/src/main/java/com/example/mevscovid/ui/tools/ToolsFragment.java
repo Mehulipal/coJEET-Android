@@ -95,8 +95,8 @@ public class ToolsFragment extends Fragment {
             public void onResponse(Call<Post> call, Response<Post> response) {
                 Log.e("RETRO", "response : " + response.body().toString());
                 // Toast.makeText(getActivity(), "Data inserted", Toast.LENGTH_SHORT).show();
-                Log.e("babu","mopu");
-
+                Log.e("RETRO","status : " + response.body().getStatus());
+                Log.e("RETRO","message : " + response.body().getMsg());
                 Log.e("babu","mopu");
                 Toast.makeText(getContext(),"Data successfully inserted",Toast.LENGTH_LONG).show();
 
