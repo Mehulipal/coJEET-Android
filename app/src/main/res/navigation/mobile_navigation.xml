@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_home_parent">
 
     <fragment
         android:id="@+id/nav_login"
@@ -16,9 +16,34 @@
         android:label="@string/menu_signup"
         tools:layout="@layout/signup" />
     <fragment
+        android:id="@+id/nav_home_parent"
+        android:name="com.example.mevscovid.ui.home.HomeParentFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_parent_home" />
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.example.mevscovid.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_home2"
+        android:name="com.example.mevscovid.ui.home.Home2Fragment"
+        android:label="Home2"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_home3"
+        android:name="com.example.mevscovid.ui.home.Home3Fragment"
+        android:label="Home3"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_home4"
+        android:name="com.example.mevscovid.ui.home.Home4Fragment"
+        android:label="Home4"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_home5"
+        android:name="com.example.mevscovid.ui.home.Home5Fragment"
+        android:label="Home5"
         tools:layout="@layout/fragment_home" />
 
     <fragment
