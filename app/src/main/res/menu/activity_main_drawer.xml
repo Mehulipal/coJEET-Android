@@ -4,32 +4,79 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
+      <!--  <item
             android:id="@+id/nav_home_parent"
             android:icon="@drawable/ic_work_black_24dp"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_home" /> -->
 
-        <item
+      <item
+          android:id="@+id/nav_home_parent"
+          android:icon="@drawable/ic_baseline_home_24"
+          android:title="Home" />
+      <item
+          android:id="@+id/nav_about"
+          android:icon="@drawable/ic_baseline_people_outline_24"
+          android:title="About" />
+
+      <!--  <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_group_add_black_24dp"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_slideshow" /> -->
 
-        <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_filter_center_focus_black_24dp"
-                android:title="@string/menu_share" />
-        <item
+
+        <!-- <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_chat_black_24dp"
-                android:title="@string/menu_send" />
-        <item
-            android:id="@+id/nav_tools"
+                android:title="@string/menu_send" /> -->
+
+        <!-- <item
+            android:id="@+id/nav_map"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
-            android:title="Add" />
+            android:title="Map" /> -->
+        <!-- <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Chat" /> -->
+
+      <item
+          android:id="@+id/nav_L"
+          android:icon="@drawable/ic_baseline_pool_24"
+          android:title="Help" />
+      <item
+          android:id="@+id/nav_H"
+          android:icon="@drawable/ic_baseline_pan_tool_24_2"
+          android:title="Donate" />
+      <item
+          android:id="@+id/nav_N"
+          android:icon="@drawable/ic_baseline_directions_run_24"
+          android:title="Service" />
+      <item
+          android:id="@+id/nav_C"
+          android:icon="@drawable/ic_baseline_airline_seat_flat_24"
+          android:title="Patient" />
+      <item
+          android:id="@+id/nav_F"
+          android:icon="@drawable/ic_baseline_emoji_people_24"
+          android:title="Frontliner" />
+      <item
+          android:id="@+id/nav_share"
+          android:icon="@drawable/ic_baseline_how_to_reg_24"
+          android:title="@string/menu_share" />
+      <item
+          android:id="@+id/nav_tools"
+          android:icon="@drawable/ic_baseline_local_phone_24"
+          android:title="Contact" />
+      <item
+          android:id="@+id/rate"
+          android:icon="@drawable/ic_baseline_star_half_24"
+          android:title="Rate" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="@string/menu_gallery" />
-        </group>
+
+
+
+    </group>
 
 </menu>

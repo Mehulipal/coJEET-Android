@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">coJEET</string>
+    <string name="app_name">Andaman</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">coJEET</string>
@@ -53,10 +53,34 @@
     <string name="smart_reply_error">Error</string>
 
     <array name="genres">
-        <item>Health Workers</item>
-        <item>Tourism Facilitator</item>
+        <item>Door to door seller</item>
+        <item>Small farmer</item>
         <item>Transport Provider</item>
         <item>Construction Labourer</item>
+    </array>
+    <array name="genres2">
+        <item>Rice</item>
+        <item>Pulse</item>
+        <item>Flour</item>
+        <item>Sugar</item>
+    </array>
+    <array name="genres3">
+        <item>General medical store</item>
+        <item>Homoeopathic medical store</item>
+        <item>Ayurveda medical store</item>
+        <item>First aid centre</item>
+    </array>
+    <array name="genres4">
+        <item>100-200 beds</item>
+        <item>200-300 beds</item>
+        <item>300-400 beds</item>
+        <item>400-500 beds</item>
+    </array>
+    <array name="genres5">
+        <item>Mask</item>
+        <item>Sanitizer</item>
+        <item>COVID treatment kit</item>
+        <item>COVID safety gear</item>
     </array>
 
     <string name="link1">
@@ -89,6 +113,7 @@
     <string name="link10">
         <a href = "https://www.hpsbys.in/content/iuu">VISIT</a>
     </string>
+    <string name="map_key" translatable="false">AIzaSyBLflUreqlf9GzZGaN1GHiWarOH7v6gL-o</string>
 
 
 </resources>

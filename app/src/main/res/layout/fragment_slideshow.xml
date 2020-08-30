@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/colorWhite"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
@@ -10,7 +11,7 @@
         android:id="@+id/editText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your name" />
+        android:hint="Enter job seeker name" />
 
     <Spinner
         android:id="@+id/spinner2"
@@ -38,17 +39,15 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Long Press to Update"
         android:layout_below="@+id/delete"
         android:padding="8dp"
-        />
+        android:text="Long Press to Update" />
 
     <ListView
         android:id="@+id/ListViewMembers"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textView2"
-        />
+        android:layout_below="@+id/textView2" />
 
 </RelativeLayout>
 

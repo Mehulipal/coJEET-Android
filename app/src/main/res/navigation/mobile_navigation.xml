@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/nav_home_parent"
         android:name="com.example.mevscovid.ui.home.HomeParentFragment"
-        android:label="@string/menu_home"
+        android:label="Andaman"
         tools:layout="@layout/fragment_parent_home" />
     <fragment
         android:id="@+id/nav_home"
@@ -61,8 +61,13 @@
     <fragment
         android:id="@+id/nav_tools"
         android:name="com.example.mevscovid.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
+        android:label="Contact"
         tools:layout="@layout/fragment_tools" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.mevscovid.ui.About"
+        android:label="About"
+        tools:layout="@layout/about" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -75,4 +80,51 @@
         android:name="com.example.mevscovid.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+
+    <fragment
+        android:id="@+id/rate"
+        android:name="com.example.mevscovid.ui.rating.rate"
+        android:label="Rate"
+        tools:layout="@layout/fragment_rate" />
+
+  <!--  <fragment
+        android:id="@+id/nav_map"
+        android:name="com.example.mevscovid.ui.map.MapView"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />  -->
+
+    <activity
+        android:id="@+id/nav_map"
+        app:action="android.intent.action.VIEW"
+        app:data="https://www.google.com/maps/@23.7064362,86.7766621,8z/data=!3m1!4b1!4m2!6m1!1s1xyZC_DDv1RoQyiJUkRaPO6hYZjYXBAwY" />
+    <activity
+        android:id="@+id/nav_chat"
+        app:action="android.intent.action.VIEW"
+        app:data="https://mehuli-gov.000webhostapp.com/chat/chat/mchat/index.php" />
+    <fragment
+        android:id="@+id/nav_L"
+        android:name="com.example.mevscovid.ui.home.LFragment"
+        android:label="Help"
+        tools:layout="@layout/activity_l" />
+    <fragment
+        android:id="@+id/nav_H"
+        android:name="com.example.mevscovid.ui.home.HFragment"
+        android:label="Donate"
+        tools:layout="@layout/activity_h" />
+    <fragment
+        android:id="@+id/nav_N"
+        android:name="com.example.mevscovid.ui.home.NFragment"
+        android:label="Service"
+        tools:layout="@layout/activity_n" />
+    <fragment
+        android:id="@+id/nav_C"
+        android:name="com.example.mevscovid.ui.home.CFragment"
+        android:label="Patient"
+        tools:layout="@layout/activity_c" />
+    <fragment
+        android:id="@+id/nav_F"
+        android:name="com.example.mevscovid.ui.home.FFragment"
+        android:label="Frontliner"
+        tools:layout="@layout/activity_f" />
+
 </navigation>

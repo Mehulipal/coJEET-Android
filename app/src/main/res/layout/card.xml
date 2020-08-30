@@ -17,6 +17,7 @@ app:strokeWidth="1dp">
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+
     <TextView
         android:id="@+id/policy_name_view"
         android:layout_width="wrap_content"

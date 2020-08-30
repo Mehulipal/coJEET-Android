@@ -32,7 +32,7 @@ public class ToolsFragment extends Fragment {
     EditText muser, memail, mmobile, mcomments;
     Button add;
     String iddata = null;
-    ProgressDialog pd;
+    private ProgressDialog progressDialog;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -55,8 +55,6 @@ public class ToolsFragment extends Fragment {
 
         add = (Button) root.findViewById(R.id.add);
 
-        pd = new ProgressDialog(getContext());
-
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +69,12 @@ public class ToolsFragment extends Fragment {
 
     //insert student
     public void insert() {
+
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Submitting...");
+        progressDialog.show();
+
         String suser = muser.getText().toString().trim();
         String semail = memail.getText().toString().trim();
         String smobile = mmobile.getText().toString().trim();
@@ -93,6 +97,9 @@ public class ToolsFragment extends Fragment {
       //  Log.e("User*",p.getUser());
         call.enqueue(new Callback<Post>() {
             public void onResponse(Call<Post> call, Response<Post> response) {
+
+                if (progressDialog != null) progressDialog.dismiss();
+
                 Log.e("RETRO", "response : " + response.body().toString());
                 // Toast.makeText(getActivity(), "Data inserted", Toast.LENGTH_SHORT).show();
                 Log.e("RETRO","status : " + response.body().getStatus());
@@ -105,6 +112,8 @@ public class ToolsFragment extends Fragment {
             }
             @Override
             public void onFailure(Call<Post> call, Throwable t) {
+
+                if (progressDialog != null) progressDialog.dismiss();
 
              //   Toast.makeText(getActivity(), t.getMessage(), Toast.LENGTH_SHORT).show();
                 t.printStackTrace();

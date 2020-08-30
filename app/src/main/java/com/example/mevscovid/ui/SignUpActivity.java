@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,8 @@ public class SignUpActivity extends AppCompatActivity {
     FirebaseAuth mFirebaseAuth;
 
     Button btnLogin;
+
+    ProgressBar progressBar;
 
 
     /** @Override protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +115,8 @@ public class SignUpActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                Toast.makeText(SignUpActivity.this,"Signing up...",Toast.LENGTH_LONG).show();
                 String email = emailId.getText().toString();
                 String pwd = password.getText().toString();
                 if (email.isEmpty()) {

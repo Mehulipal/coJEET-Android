@@ -3,49 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="20dp">
 
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="2"
+        android:text="Contact Us"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="40sp"/>
 
     <EditText
         android:id="@+id/user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="2"
         android:ems="10"
-        android:hint="user"
+        android:hint="Username"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="2"
         android:ems="10"
-        android:hint="email"
+        android:hint="Email"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="2"
         android:ems="10"
-        android:hint="mobile"
+        android:hint="Mobile"
         android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:ems="10"
-        android:hint="comments"
-        android:inputType="textPersonName" />
+        android:hint="Comments"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="20dp"/>
 
     <Button
         android:id="@+id/add"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Button" />
+        android:background="@android:color/holo_green_dark"
+        android:text="Submit"
+        android:textSize="20sp"/>
 </LinearLayout>
